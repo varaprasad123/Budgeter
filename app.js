@@ -210,7 +210,7 @@ var UIController = (function() {
         },
         updateBudgetinUI: function(obj){
             var type='exp';
-            if(obj.totalBudget===0){
+            if(obj.totalBudget>0){
                 type='inc'
             } 
             document.querySelector(UserStrings.budgetLabel).textContent=formatNumber(obj.totalBudget,type);
